@@ -1,13 +1,210 @@
-// import global rules
+// impoer global rules
 @import './layout/global_rules';
-// global variables
-@import './variables/vars';
-@import './helpers/mixins';
+
+@import './variables/vars'; // global variable
+@import './helpers/mixins.scss';
 @import './functions/functions';
 @import './helpers/media-queries';
 
-.container {
-    margin: auto;
-    font-size: 50px;
-    border: 1px solid red;
+@import './pages/index';
+@import './pages/projects';
+
+.page {
+  display: flex;
+  background-color: $background-color-2;
+  min-height: 300vh;
+
+  /* start sidebar */
+  .sidebar {
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+    background-color: $background-color;
+    padding: 20px;
+    position: relative;
+
+    @include breakpoint(md) {
+      width: 62px;
+      padding: 6px;
+    }
+
+    >h3 {
+      margin-bottom: 50px;
+      position: relative;
+      text-align: center;
+      margin-top: 0;
+
+      @include breakpoint(md) {
+        font-size: 10px;
+        margin-bottom: 15px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: black;
+        height: 2px;
+        width: 80%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        left: 50%;
+
+        @include breakpoint(md) {
+          width: 20px;
+          bottom: -5px;
+          height: 1px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: black;
+        border: 2px solid white;
+
+        @include breakpoint(md) {
+          width: 5px;
+          height: 5px;
+          bottom: -8px;
+          border: 1px solid white;
+        }
+      }
+    }
+
+    ul {
+      padding: 0;
+
+      li {
+        a {
+          transition: 0.3s;
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: black;
+          border-radius: 6px;
+          padding: 10px;
+
+          &:hover,
+          &.active {
+            background-color: $background-color-3;
+          }
+
+          span {
+            font-size: 14px;
+            margin-left: 10px;
+
+            @include breakpoint(md) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* end sidebar */
+  /* Start Content Head*/
+  .content {
+    width: 100%;
+    overflow: hidden;
+
+    .head {
+      background-color: $background-color;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+
+      .search {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '\f002';
+          font-family: 'Font Awesome 6 Free';
+          font-weight: 900;
+          left: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 14px;
+          color: $gry-color;
+        }
+
+        input {
+          border: 1px solid#ccc;
+          border-radius: 10px;
+          margin-left: 5px;
+          padding: 10px 30px;
+          width: 160px;
+          transition: width 0.3s;
+
+          &:focus {
+            width: 200px;
+            outline: 1px solid #ddd;
+
+            &::placeholder {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+
+        .notification {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: $red-color;
+            border-radius: 50%;
+            right: -2px;
+            top: -5px;
+          }
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+          margin-left: 15px;
+          margin-right: 15px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .title {
+      position: relative;
+      margin: 20px 20px 40px;
+
+      &::before,
+      &::after {
+        content: '';
+        height: 3px;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+      }
+
+      &::before {
+        background-color: white;
+        width: 120px;
+      }
+
+      &::after {
+        background-color: black;
+        width: 40px;
+      }
+    }
+  }
 }

@@ -2,16 +2,242 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HKY Dashboard</title>
-    <link rel="stylesheet" href="scss/all.min.css" />
-    <link rel="stylesheet" href="scss/main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- my main css file -->
+    <link rel="stylesheet" href="scss/framework/framework.css">
+    <link rel="stylesheet" href="scss/main.css">
 </head>
 
 <body>
-   
+
+    <div class="page">
+        <div class="sidebar ">
+            <h3>HKY Dashboard</h3>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-chart-gantt fa-fw"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#" ">
+                        <i class=" fa-solid fa-gear fa-fw"></i>
+                        <span>Settings</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#" class="  d-flex aligin-center fs-14 c-black rad-6 p-10">
+                        <i class="fa-solid fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="projects.html">
+                        <i class="fa-solid fa-diagram-project  fa-fw"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="#">
+                        <i class="fa-solid fa-book fa-fw"></i>
+                        <span>Cources</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user-group fa-fw"></i>
+                        <span>Friends</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="#">
+                        <i class="fa-regular fa-file fa-fw"></i>
+                        <span>Files</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-ruler-horizontal fa-fw"></i>
+                        <span>Plans</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- Start Head -->
+            <div class="head ">
+                <div class="search ">
+                    <input type="search" placeholder="Type keyword">
+                </div>
+                <div class="icons ">
+                    <span class="notification">
+                        <i class="fa-regular fa-bell fa-lg"></i>
+                    </span>
+                    <img src="imgs/hasan.jpg" alt="" width="25px">
+                </div>
+            </div>
+            <!-- End Head -->
+            <h1 class="title">Dashboard</h1>
+
+            <div class="wrapper">
+                <!--end welcome wedget -->
+                <div class="welcome ">
+                    <div class="intro">
+                        <div>
+                            <h2>Welcome</h2>
+                            <p>Hasan</p>
+                        </div>
+                        <img src="./imgs/welcome.png" alt="">
+                    </div>
+                    <img src="./imgs/hasan.jpg" alt="" class="avatar">
+                    <div class="body">
+                        <div>Hasan Yameen <span>Frontend Developer</span></div>
+                        <div>10 <span>Projects</span></div>
+                        <div>$5000 <span>Earned</span></div>
+                    </div>
+                    <a href="profile.html" class="visit btn-shape">Profile</a>
+                </div>
+                <!--end welcome wedget -->
+                <!--Start Quick draft wedget -->
+                <!-- <div class="quick-draft p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Quick draft</h2>
+                    <p class="mt-0 mb-20 c-gry fs-15"> write a draft for you idea</p>
+                    <form action="">
+                        <input class="d-block mb-20  w-full p-10 b-none bg-eee rad-6" type="text" placeholder="title">
+                        <textarea class="d-block mb-20  w-full p-10 b-none bg-eee rad-6" name=""
+                            placeholder="your thought"></textarea>
+                        <input class="save btn-shape d-block fs-14 bg-blue  c-white b-none w-fit" type="submit"
+                            value="save">
+                    </form>
+                </div> -->
+                <!--Start Quick draft wedget -->
+                <!-- Start targets wedge -->
+                <!-- <div class="targets p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10 ">Targets</h2>
+                    <p class="mt-0 mb-20 c-gry fs-15 ">Targets</p>
+                    <div class="target-row   d-flex aligin-center mb-20  ">
+                        <div class="icon center-flex">
+                            <i class="fa-solid fa-dollar fa-lg c-blue "></i>
+                        </div>
+                        <div class="details">
+                            <span class="fs-14 c-gry">Mony</span>
+                            <span class="d-block mt-5 mb-10 fw-bold">$20.000</span>
+                            <div class="progress p-relative">
+                                <span style="width:40%" class="bg-blue  ">
+                                    <span class="bg-blue  ">40%</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="target-row   d-flex aligin-center mb-20  ">
+                        <div class="icon center-flex">
+                            <i class="fa-solid fa-code fa-lg c-blue "></i>
+                        </div>
+                        <div class="details">
+                            <span class="fs-14 c-gry">Projects</span>
+                            <span class="d-block mt-5 mb-10 fw-bold">5</span>
+                            <div class="progress p-relative">
+                                <span style="width:60%" class="bg-blue  ">
+                                    <span class="bg-blue  ">60%</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="target-row   d-flex aligin-center mb-20  ">
+                        <div class="icon center-flex">
+                            <i class="fa-solid fa-user fa-lg c-blue "></i>
+                        </div>
+                        <div class="details">
+                            <span class="fs-14 c-gry">Team</span>
+                            <span class="d-block mt-5 mb-10 fw-bold">12</span>
+                            <div class="progress p-relative">
+                                <span style="width:50%" class="bg-blue  ">
+                                    <span class="bg-blue  ">50%</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- End targets wedget -->
+                <!-- Start ticket wedget -->
+                <!-- <div class="tickets p-20 bg-white rad-10">
+                    <h2 class="mt-0 mb-10">Tickets statistics</h2>
+                    <p class="mt-10 mb-20 c-gry fs-15">Evrything about support tickets</p>
+                    <div class="d-flex txt-c gap-20 f-wrap">
+                        <div class="box p-20 rad-10 fs-14 c-gry">
+                            <i class="fa-regular fa-rectangle-list fa-2x mb-10 c-orange"></i>
+                            <span class="d-block c-black fw-bold fs-25 mb-5">200</span>
+                            Total
+                        </div>
+                        <div class="box p-20 rad-10 fs-14 c-gry">
+                            <i class="fa-regular fa-spinner fa-2x mb-10 c-orange"></i>
+                            <span class="d-block c-black fw-bold fs-25 mb-5">50</span>
+                            Pending
+                        </div>
+                        <div class="box p-20 rad-10 fs-14 c-gry">
+                            <i class="fa-regular fa-circle-check fa-2x mb-10 c-orange"></i>
+                            <span class="d-block c-black fw-bold fs-25 mb-5">110</span>
+                            Closed
+                        </div>
+                        <div class="box p-20 rad-10 fs-14 c-gry">
+                            <i class="fa-regular fa-rectangle-xmark fa-2x mb-10 c-orange"></i>
+                            <span class="d-block c-black fw-bold fs-25 mb-5">40</span>
+                            Deleted
+                        </div>
+                    </div>
+                </div> -->
+                <!-- End ticket wedget  -->
+                <!-- Start latest news -->
+                <!-- <div class="latest-news p-20 bg-white rad-10 txt-c-mobile">
+                    <h2 class="mt-0 mb-20">Latest News</h2>
+                    <div class="news-row d-flex aligin-center">
+                        <img src="imgs/welcome.png" alt="">
+                        <div class="info">
+                            <h3>Created Sass Section</h3>
+                            <p class="m-0 fs-14 c-gry">New sass examples and tutorials</p>
+                        </div>
+                        <span class="btn-shape bg-eee fs-14 label">3 days ago</span>
+                    </div>
+                    <div class="news-row d-flex aligin-center">
+                        <img src="imgs/welcome.png" alt="">
+                        <div class="info">
+                            <h3>Changed the design</h3>
+                            <p class="m-0 fs-14 c-gry">New sass examples and tutorials</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-14 label">3 days ago</div>
+                    </div>
+                    <div class="news-row d-flex aligin-center">
+                        <img src="imgs/welcome.png" alt="">
+                        <div class="info">
+                            <h3>Team Increased</h3>
+                            <p class="m-0 fs-14 c-gry">New sass examples and tutorials</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-14 label">3 days ago</div>
+                    </div>
+                    <div class="news-row d-flex aligin-center">
+                        <img src="imgs/welcome.png" alt="">
+                        <div class="info">
+                            <h3>Added Payment Gateway</h3>
+                            <p class="m-0 fs-14 c-gry">New sass examples and tutorials</p>
+                        </div>
+                        <div class="btn-shape bg-eee fs-14 label">3 days ago</div>
+                    </div>
+                </div> -->
+                <!-- End latest news -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <!-- my main js file -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

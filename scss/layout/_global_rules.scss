@@ -1,42 +1,35 @@
-@import '../helpers/media-queries';
+@import './variables/vars'; // global variable
 
 * {
   box-sizing: border-box;
-  margin: 0;
+}
+
+// *:focus {
+//   outline: none;
+// }
+
+ul {
+  list-style: none;
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(136, 12, 12);
+}
+::-webkit-scrollbar-thumb {
+  color: $blue-color;
+  &:hover {
+    color: $blue-alt-color;
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #000;
-}
-
-ul {
-  list-style: none;
-}
-
-.container {
-  @include breakpoint(xs) {
-    width: 95%;
-  }
-
-  @include breakpoint(sm) {
-    width: 540px;
-  }
-
-  @include breakpoint(md) {
-    width: 720px;
-  }
-
-  @include breakpoint(lg) {
-    width: 960px;
-  }
-
-  @include breakpoint(xl) {
-    width: 1140px;
-  }
-
-  @include breakpoint(xxl) {
-    width: 1320px;
-  }
 }
