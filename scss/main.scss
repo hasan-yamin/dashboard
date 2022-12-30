@@ -1,0 +1,13 @@
+// import global rules
+@import './layout/global_rules';
+// global variables
+@import './variables/vars';
+@import './helpers/mixins';
+@import './functions/functions';
+@import './helpers/media-queries';
+
+.container {
+    margin: auto;
+    font-size: 50px;
+    border: 1px solid red;
+}
